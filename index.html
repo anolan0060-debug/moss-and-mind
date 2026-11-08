@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moss & Mind - Cozy CBT Storybook & Panic Relief</title>
+    <title>Moss & Mind - Cozy Dark Forest Anxiety Companion</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -18,40 +18,28 @@
             theme: {
                 extend: {
                     colors: {
-                        moss: {
-                            50: '#f2f6f1',
-                            100: '#e1ebe0',
-                            200: '#c5d7c3',
-                            300: '#9ebf9b',
-                            400: '#75a172',
-                            500: '#538350',
-                            600: '#3f683d',
-                            700: '#345233',
-                            800: '#2b422a',
-                            900: '#233722',
+                        forest: {
+                            950: '#0a160f',
+                            900: '#0d1f15',
+                            850: '#12261b',
+                            800: '#162e21',
+                            700: '#1f3e2d',
+                            600: '#2b523c',
+                            500: '#38694d'
                         },
-                        amberWood: {
-                            50: '#fffcf7',
-                            100: '#fef3e2',
-                            200: '#fde4c1',
-                            300: '#fbcfa0',
-                            400: '#f7b274',
-                            500: '#f19247',
-                            600: '#db742c',
-                            700: '#b65622',
-                            800: '#934421',
-                            900: '#77391f',
+                        amberGold: {
+                            300: '#f7cd88',
+                            400: '#f2b868',
+                            500: '#e8a750',
+                            600: '#d48a37',
+                            700: '#b86d25'
                         },
-                        cozyBg: '#f7f4eb',
-                        cozyCard: '#ffffff',
-                        cozyCream: '#fffdf9',
-                        cozyLavender: '#e3def0',
-                        cozySage: '#dbe6d8',
-                        cozyRose: '#f7d8d6',
-                        cozySky: '#d8e9f3'
+                        cozyCream: '#f5eedc',
+                        cozyCreamDark: '#ede4ce',
+                        cozyTextDark: '#2c1d11',
                     },
                     fontFamily: {
-                        display: ['Fredoka', 'cursive', 'sans-serif'],
+                        display: ['Comfortaa', 'cursive', 'sans-serif'],
                         body: ['Nunito', 'sans-serif']
                     }
                 }
@@ -61,614 +49,715 @@
     <style>
         body {
             font-family: 'Nunito', sans-serif;
-            background-color: #f7f4eb;
-            color: #2b422a;
-            background-image: 
-                radial-gradient(#dbe6d8 2px, transparent 2px), 
-                radial-gradient(#e1ebe0 2px, #f7f4eb 2px);
-            background-size: 50px 50px;
-            background-position: 0 0, 25px 25px;
+            background-color: #07100b;
+            color: #f5eedc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-h: 100vh;
+            margin: 0;
+            overflow-x: hidden;
         }
 
-        ::-webkit-scrollbar { width: 10px; height: 10px; }
-        ::-webkit-scrollbar-track { background: #f7f4eb; }
-        ::-webkit-scrollbar-thumb { background: #9ebf9b; border-radius: 9999px; border: 2px solid #f7f4eb; }
-        ::-webkit-scrollbar-thumb:hover { background: #75a172; }
-
-        .cozy-shadow {
-            box-shadow: 0 12px 32px -8px rgba(43, 66, 42, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+        /* Mobile Shell Frame simulating iPhone screen */
+        .mobile-shell {
+            width: 100%;
+            max-width: 412px;
+            height: 870px;
+            background: linear-gradient(180deg, #0d1f15 0%, #142b1e 50%, #0a160f 100%);
+            border-radius: 48px;
+            box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.😎, 0 0 0 12px #181d19, 0 0 0 14px #0c100d;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-col: column;
         }
-        .cozy-shadow-lg {
-            box-shadow: 0 20px 45px -10px rgba(43, 66, 42, 0.12), 0 6px 16px -4px rgba(0, 0, 0, 0.04);
+
+        /* Dark Glass UI Cards & Pills matching reference photos */
+        .glass-pill {
+            background: rgba(22, 46, 33, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
+        .glass-pill-active {
+            background: linear-gradient(135deg, #f2b868 0%, #e8a750 100%);
+            color: #2c1d11;
+            font-weight: 800;
+            box-shadow: 0 4px 20px rgba(232, 167, 80, 0.35);
+        }
+
+        .gold-btn {
+            background: linear-gradient(180deg, #f7cd88 0%, #e8a750 100%);
+            color: #2c1d11;
+            font-family: 'Comfortaa', cursive;
+            font-weight: 700;
+            box-shadow: 0 6px 20px rgba(232, 167, 80, 0.3);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .gold-btn:active {
+            transform: scale(0.97);
+        }
+
+        .dark-glass-btn {
+            background: rgba(26, 48, 35, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #f5eedc;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+        .dark-glass-btn:active {
+            background: rgba(38, 70, 51, 0.9);
+            transform: scale(0.98);
+        }
+
+        /* Dashed Breathing Circle */
+        .dashed-ring {
+            stroke-dasharray: 8 6;
+            animation: rotateSlow 60s linear infinite;
+        }
+        @keyframes rotateSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Keyframe Animations */
         @keyframes gentleFloat {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-7px) rotate(1.5deg); }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
         }
-        @keyframes earWiggle {
-            0%, 100% { transform: rotate(0deg); }
-            5% { transform: rotate(-8deg); }
-            10% { transform: rotate(6deg); }
-            15% { transform: rotate(0deg); }
-        }
-        @keyframes blinkEye {
-            0%, 96%, 100% { transform: scaleY(1); }
-            98% { transform: scaleY(0.1); }
-        }
-        @keyframes fireflyGlow {
-            0%, 100% { opacity: 0.4; transform: scale(0.95); }
-            50% { opacity: 1; transform: scale(1.08); filter: drop-shadow(0 0 12px #f7b274); }
+        @keyframes glowPulse {
+            0%, 100% { opacity: 0.5; filter: drop-shadow(0 0 8px #f2b868); }
+            50% { opacity: 1; filter: drop-shadow(0 0 16px #f7cd88); }
         }
 
-        .animate-float { animation: gentleFloat 4.5s ease-in-out infinite; }
-        .animate-ear { transform-origin: bottom center; animation: earWiggle 6s infinite; }
-        .animate-blink { transform-origin: center; animation: blinkEye 4s infinite; }
-        .firefly-glow { animation: fireflyGlow 3s ease-in-out infinite; }
+        .animate-float { animation: gentleFloat 4s ease-in-out infinite; }
+        .animate-glow { animation: glowPulse 3s ease-in-out infinite; }
 
-        #bramble-hedgehog-container {
-            transition: transform 0.12s linear, filter 0.3s ease;
-        }
-        .dialogue-bubble-left::before {
-            content: '';
-            position: absolute;
-            left: -14px;
-            top: 28px;
-            border-width: 8px 14px 8px 0;
-            border-style: solid;
-            border-color: transparent #ffffff transparent transparent;
-        }
+        /* Custom Scrollbar for inner views */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
+<body>
 
-<body class="min-h-screen flex flex-col justify-between selection:bg-amberWood-200 selection:text-amberWood-950 relative overflow-x-hidden">
+    <!-- iPhone Shell Container -->
+    <div class="mobile-shell flex flex-col justify-between">
+        
+        <!-- Background Ambient Fireflies Canvas -->
+        <canvas id="fireflyCanvas" class="absolute inset-0 pointer-events-none z-0"></canvas>
 
-    <canvas id="ambient-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
-
-    <!-- Header Navigation -->
-    <header class="sticky top-0 z-40 bg-cozyBg/95 backdrop-blur-md border-b border-moss-200/70 px-4 py-3">
-        <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-3">
+        <!-- Dynamic Top Status Bar / Header -->
+        <div class="z-20 pt-4 px-6 flex items-center justify-between shrink-0">
+            <span class="text-xs font-bold tracking-wider text-emerald-200/60 font-mono">09:41</span>
             
-            <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('bramble')">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-moss-400 via-moss-500 to-amberWood-400 flex items-center justify-center text-white text-2xl shadow-md transform hover:rotate-6 transition-transform">
-                    <i class="fa-solid fa-seedling"></i>
+            <!-- Currency Header Pill (Shown on Story Map & Tabs) -->
+            <div id="currency-header" class="glass-pill px-3.5 py-1.5 rounded-full flex items-center gap-3 text-xs font-bold">
+                <div class="flex items-center gap-1.5 text-amberGold-400">
+                    <span>🌰</span>
+                    <span id="acorn-val">48</span>
                 </div>
-                <div>
-                    <h1 class="font-display font-bold text-2xl text-moss-900 tracking-tight leading-none flex items-center gap-2">
-                        Moss & Mind
-                        <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-amberWood-100 text-amberWood-800 font-body font-bold border border-amberWood-200">Storybook Edition</span>
-                    </h1>
-                    <p class="text-xs text-moss-600 font-semibold">Your safe, calm woodland refuge</p>
+                <div class="w-px h-3 bg-white/20"></div>
+                <div class="flex items-center gap-1.5 text-emerald-400">
+                    <span>🍃</span>
+                    <span id="leaf-val">24</span>
+                </div>
+                <div class="w-px h-3 bg-white/20"></div>
+                <div class="flex items-center gap-1.5 text-rose-300">
+                    <span>🌸</span>
+                    <span id="blossom-val">9</span>
                 </div>
             </div>
 
-            <!-- Header Controls & Cash App Shop -->
-            <div class="flex items-center gap-2.5">
-                <!-- Cash App Shop Button -->
-                <button onclick="openCashAppModal()" class="flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white text-xs font-bold transition-all shadow-md active:scale-95">
-                    <i class="fa-solid fa-store text-emerald-200"></i>
-                    Get Acorns ($CryptidCake09)
-                </button>
+            <!-- Back Header Pill (Shown inside story reader screen) -->
+            <div id="story-header" class="hidden glass-pill px-4 py-1.5 rounded-full flex items-center gap-2 text-xs font-bold text-cozyCream cursor-pointer" onclick="switchTab('tales')">
+                <i class="fa-solid fa-chevron-left text-amberGold-400"></i>
+                <span id="story-header-title">Pip the Finch</span>
+            </div>
 
-                <button id="sound-toggle-btn" onclick="toggleAmbientSound()" class="flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-amberWood-100 hover:bg-amberWood-200 text-amberWood-900 text-xs font-bold transition-all border border-amberWood-300/80 shadow-sm" title="Toggle ambient rain & chimes">
-                    <i id="sound-icon" class="fa-solid fa-cloud-rain text-amberWood-600"></i>
-                    <span id="sound-text">Ambient: Rain & Chimes</span>
-                </button>
-
-                <button onclick="switchTab('bramble')" class="flex items-center gap-2 px-4 py-2 rounded-2xl bg-gradient-to-r from-amberWood-500 to-amberWood-600 hover:from-amberWood-600 hover:to-amberWood-700 text-white font-display text-sm font-bold shadow-md hover:shadow-lg transition-all transform active:scale-95">
-                    <i class="fa-solid fa-heart-pulse animate-pulse text-rose-200"></i>
-                    Panic SOS
-                </button>
+            <div class="flex items-center gap-1 text-emerald-200/60 text-xs">
+                <i class="fa-solid fa-signal"></i>
+                <i class="fa-solid fa-wifi ml-1"></i>
+                <i class="fa-solid fa-battery-full ml-1"></i>
             </div>
         </div>
 
-        <!-- Navigation Tabs -->
-        <nav class="max-w-5xl mx-auto mt-3 flex items-center justify-start gap-2 overflow-x-auto pb-1 scrollbar-none">
-            <button id="tab-btn-bramble" onclick="switchTab('bramble')" class="tab-btn active px-4 py-2 rounded-2xl font-display text-sm font-medium transition-all flex items-center gap-2 border border-transparent whitespace-nowrap bg-moss-600 text-white shadow-sm">
-                <i class="fa-solid fa-wind"></i>
-                1. Bramble Burrow (Breathing SOS)
-            </button>
+        <!-- ================= SCREEN CONTENTS CONTAINER ================= -->
+        <div class="relative z-10 flex-1 overflow-y-auto no-scrollbar px-5 pt-3 pb-24 flex flex-col justify-between">
 
-            <button id="tab-btn-teahouse" onclick="switchTab('teahouse')" class="tab-btn px-4 py-2 rounded-2xl font-display text-sm font-medium transition-all flex items-center gap-2 border border-transparent text-moss-800 hover:bg-moss-100/70 whitespace-nowrap">
-                <i class="fa-solid fa-book-open text-amberWood-600"></i>
-                2. Story Map & CBT Tales (200 Levels)
-            </button>
-
-            <button id="tab-btn-curio" onclick="switchTab('curio')" class="tab-btn px-4 py-2 rounded-2xl font-display text-sm font-medium transition-all flex items-center gap-2 border border-transparent text-moss-800 hover:bg-moss-100/70 whitespace-nowrap">
-                <i class="fa-solid fa-shapes"></i>
-                3. Curio Cabinet (Somatic TIPP)
-            </button>
-
-            <button id="tab-btn-patchwork" onclick="switchTab('patchwork')" class="tab-btn px-4 py-2 rounded-2xl font-display text-sm font-medium transition-all flex items-center gap-2 border border-transparent text-moss-800 hover:bg-moss-100/70 whitespace-nowrap">
-                <i class="fa-solid fa-border-all"></i>
-                4. Patchwork Journal
-            </button>
-        </nav>
-    </header>
-
-    <!-- Main Container -->
-    <main class="max-w-5xl mx-auto w-full px-4 py-6 flex-grow relative z-10">
-
-        <!-- ================= SECTION 1: BRAMBLE BURROW ================= -->
-        <section id="tab-content-bramble" class="tab-content space-y-6">
-            <div class="bg-gradient-to-r from-moss-100 via-amberWood-50 to-cozySage/40 p-5 rounded-3xl border-2 border-moss-200/80 cozy-shadow flex flex-col md:flex-row items-center justify-between gap-4">
-                <div class="space-y-1 text-center md:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-moss-200/80 text-moss-900 text-xs font-bold">
-                        <i class="fa-solid fa-shield-heart text-moss-600"></i> Grounding & Safe Space
-                    </div>
-                    <h2 class="font-display text-2xl md:text-3xl font-bold text-moss-900">Bramble Burrow Panic SOS</h2>
-                    <p class="text-sm text-moss-700 max-w-lg">
-                        You are completely safe right now. Breathe with Bramble the Hedgehog. Follow along to calm your body's nerve signals.
-                    </p>
-                </div>
-
-                <div class="flex bg-white/90 p-1.5 rounded-2xl border border-moss-200 shadow-inner gap-1">
-                    <button id="pattern-478-btn" onclick="setBreathingPattern('478')" class="px-3.5 py-2 rounded-xl text-xs font-bold transition-all bg-moss-600 text-white shadow-sm">4-7-8 Deep Calm</button>
-                    <button id="pattern-444-btn" onclick="setBreathingPattern('444')" class="px-3.5 py-2 rounded-xl text-xs font-bold text-moss-700 hover:bg-moss-100 transition-all">4-4-4 Box</button>
-                    <button id="pattern-24-btn" onclick="setBreathingPattern('24')" class="px-3.5 py-2 rounded-xl text-xs font-bold text-moss-700 hover:bg-moss-100 transition-all">2-4 Quick</button>
-                </div>
-            </div>
-
-            <div class="bg-cozyCream rounded-3xl p-6 md:p-10 border-2 border-moss-200/80 cozy-shadow-lg flex flex-col items-center justify-center text-center relative overflow-hidden min-h-[460px]">
-                <div class="z-10 mb-2">
-                    <span id="breathing-prompt" class="font-display text-2xl md:text-3xl font-bold text-amberWood-900 tracking-wide">Ready to begin...</span>
-                    <p id="breathing-subtext" class="text-xs text-moss-600 font-semibold mt-1">Press play to match your breath with Bramble</p>
-                </div>
-
-                <div class="relative w-72 h-72 md:w-80 md:h-80 my-2 flex items-center justify-center">
-                    <div class="absolute inset-0 rounded-full border-2 border-dashed border-moss-300/80"></div>
-                    <div class="absolute inset-6 rounded-full border border-amberWood-200/60"></div>
-
-                    <div id="bramble-hedgehog-container" class="relative z-10 w-48 h-48 md:w-56 md:h-56 flex items-center justify-center">
-                        <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-xl">
-                            <defs>
-                                <radialGradient id="quillGrad" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" stop-color="#934421" />
-                                    <stop offset="100%" stop-color="#67391f" />
-                                </radialGradient>
-                                <radialGradient id="bellyGrad" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" stop-color="#fde4c1" />
-                                    <stop offset="100%" stop-color="#fbcfa0" />
-                                </radialGradient>
-                            </defs>
-                            <g id="hedgehog-quills">
-                                <path d="M 20,100 C 10,40 60,10 100,10 C 140,10 190,40 180,100 C 190,140 150,185 100,185 C 50,185 10,140 20,100 Z" fill="url(#quillGrad)" />
-                                <path d="M 35,50 L 25,35 L 45,45 M 65,30 L 60,10 L 78,25 M 100,20 L 100,2 L 110,20 M 135,28 L 145,10 L 142,32 M 165,50 L 180,38 L 165,62 M 175,85 L 195,85 L 175,98 M 170,120 L 190,132 L 168,135 M 150,155 L 165,172 L 142,165 M 120,175 L 128,195 L 110,178 M 80,178 L 70,196 L 72,175 M 48,160 L 32,175 L 45,148 M 28,125 L 8,130 L 28,112 M 25,85 L 5,80 L 28,75" stroke="#77391f" stroke-width="4" stroke-linecap="round" fill="none" />
-                            </g>
-                            <ellipse cx="100" cy="115" rx="65" ry="55" fill="url(#bellyGrad)" />
-                            <ellipse cx="100" cy="120" rx="48" ry="38" fill="#fffcf7" opacity="0.6" />
-                            <g class="animate-ear">
-                                <ellipse cx="50" cy="65" rx="12" ry="16" fill="#fde4c1" stroke="#b65622" stroke-width="3" />
-                                <ellipse cx="50" cy="65" rx="6" ry="9" fill="#f7b274" />
-                            </g>
-                            <g class="animate-ear">
-                                <ellipse cx="150" cy="65" rx="12" ry="16" fill="#fde4c1" stroke="#b65622" stroke-width="3" />
-                                <ellipse cx="150" cy="65" rx="6" ry="9" fill="#f7b274" />
-                            </g>
-                            <g class="animate-blink">
-                                <circle cx="75" cy="92" r="6" fill="#2b422a" />
-                                <circle cx="73" cy="90" r="2" fill="#ffffff" />
-                                <circle cx="125" cy="92" r="6" fill="#2b422a" />
-                                <circle cx="123" cy="90" r="2" fill="#ffffff" />
-                            </g>
-                            <ellipse cx="64" cy="104" rx="9" ry="6" fill="#f7d8d6" opacity="0.85" />
-                            <ellipse cx="136" cy="104" rx="9" ry="6" fill="#f7d8d6" opacity="0.85" />
-                            <ellipse cx="100" cy="98" rx="8" ry="6" fill="#67391f" />
-                            <circle cx="98" cy="96" r="2" fill="#ffffff" />
-                            <path d="M 94,106 Q 100,112 106,106" stroke="#67391f" stroke-width="3" stroke-linecap="round" fill="none" />
-                            <ellipse cx="65" cy="140" rx="12" ry="9" fill="#fde4c1" stroke="#b65622" stroke-width="2" />
-                            <ellipse cx="135" cy="140" rx="12" ry="9" fill="#fde4c1" stroke="#b65622" stroke-width="2" />
-                        </svg>
-                    </div>
-
-                    <div id="firefly-companion" class="absolute top-4 right-6 w-10 h-10 firefly-glow z-20">
-                        <svg viewBox="0 0 40 40" class="w-full h-full">
-                            <circle cx="20" cy="20" r="14" fill="#f7b274" opacity="0.3" />
-                            <circle cx="20" cy="20" r="7" fill="#fbcfa0" />
-                            <circle cx="20" cy="20" r="4" fill="#ffffff" />
-                        </svg>
-                    </div>
-                </div>
-
-                <div class="mt-2 z-10 flex flex-col items-center gap-3">
-                    <div class="flex items-center gap-2 bg-moss-100/80 px-4 py-1.5 rounded-full border border-moss-200">
-                        <span class="text-xs font-bold text-moss-700 uppercase tracking-wider">Seconds:</span>
-                        <span id="orb-timer" class="font-display text-2xl font-bold text-moss-900">4</span>
-                    </div>
-
-                    <div class="flex items-center gap-3 mt-1">
-                        <button id="pacer-toggle-btn" onclick="toggleBreathingPacer()" class="px-8 py-3.5 rounded-2xl bg-moss-600 hover:bg-moss-700 active:scale-95 text-white font-display font-bold text-base shadow-md hover:shadow-lg transition-all flex items-center gap-2.5">
-                            <i id="pacer-play-icon" class="fa-solid fa-play text-sm"></i>
-                            <span id="pacer-btn-text">Breathe with Bramble</span>
-                        </button>
-                        <button onclick="resetBreathingPacer()" class="p-3.5 rounded-2xl bg-moss-100 hover:bg-moss-200 text-moss-700 transition-all border border-moss-200" title="Reset Cycle">
-                            <i class="fa-solid fa-rotate-left"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= SECTION 2: TEAHOUSE TALES (200 LEVELS) ================= -->
-        <section id="tab-content-teahouse" class="tab-content hidden space-y-6">
-            
-            <div class="bg-gradient-to-r from-amberWood-100 via-amberWood-50 to-cozyRose/40 p-5 rounded-3xl border-2 border-amberWood-200/80 cozy-shadow flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amberWood-200 text-amberWood-900 text-xs font-bold mb-1">
-                        <i class="fa-solid fa-map"></i> CBT Story Progression (200 Levels)
-                    </div>
-                    <h2 class="font-display text-2xl font-bold text-amberWood-950">Teahouse CBT Story Map</h2>
-                    <p class="text-sm text-amberWood-800">Help woodland friends solve anxious thoughts, collect acorns & tea leaves, and unlock new regions!</p>
-                </div>
-
-                <!-- Collectibles & Shop Trigger -->
-                <div class="flex items-center gap-3 bg-white/95 px-4 py-2.5 rounded-2xl border border-amberWood-200 text-xs font-bold text-amberWood-900 shadow-sm">
-                    <div class="flex items-center gap-1.5" title="Golden Acorns">
-                        <span class="text-lg">🌰</span>
-                        <span id="acorn-count" class="font-display text-sm text-amberWood-900">0</span>
-                    </div>
-                    <div class="w-px h-5 bg-amberWood-200"></div>
-                    <div class="flex items-center gap-1.5" title="Chamomile Tea Leaves">
-                        <span class="text-lg">🍃</span>
-                        <span id="tea-count" class="font-display text-sm text-moss-800">0</span>
-                    </div>
-                    <div class="w-px h-5 bg-amberWood-200"></div>
-                    <button onclick="openCashAppModal()" class="px-2.5 py-1 rounded-xl bg-emerald-100 text-emerald-900 hover:bg-emerald-200 border border-emerald-300 flex items-center gap-1 transition-all">
-                        <i class="fa-solid fa-plus text-emerald-600"></i> Get More
-                    </button>
-                </div>
-            </div>
-
-            <!-- Story Mode Views: Level Map vs Story Reader -->
-            <div id="story-map-view" class="space-y-5">
-                <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none" id="region-tab-bar"></div>
-
-                <div id="region-header-card" class="bg-cozyCream p-4 rounded-2xl border border-moss-200 flex justify-between items-center">
-                    <div>
-                        <h3 id="region-title" class="font-display font-bold text-lg text-moss-900">Region 1: Bramble Hollow</h3>
-                        <p id="region-desc" class="text-xs text-moss-600">Mastering catastrophic thinking and basic bodily alarms.</p>
-                    </div>
-                    <span id="region-progress-badge" class="text-xs font-bold px-3 py-1 bg-moss-100 text-moss-800 rounded-full border border-moss-200">0 / 40 Unlocked</span>
-                </div>
-
-                <div id="level-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3.5 p-4 bg-cozyCream rounded-3xl border-2 border-moss-200/80 cozy-shadow max-h-[420px] overflow-y-auto"></div>
-            </div>
-
-            <!-- Story Play View -->
-            <div id="story-play-view" class="hidden bg-cozyCream rounded-3xl p-6 md:p-8 border-2 border-moss-200 cozy-shadow-lg space-y-6">
-                <div class="flex items-center justify-between border-b border-moss-100 pb-3">
-                    <button onclick="exitToStoryMap()" class="px-3.5 py-1.5 rounded-xl bg-moss-100 hover:bg-moss-200 text-moss-800 text-xs font-bold flex items-center gap-2 transition-all">
-                        <i class="fa-solid fa-arrow-left"></i> Back to Story Map
-                    </button>
-                    <span id="story-level-tag" class="font-display font-bold text-sm text-amberWood-900 bg-amberWood-100 px-3 py-1 rounded-full border border-amberWood-200">Level 1 • Bramble Hollow</span>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                    <div id="story-character-stage" class="md:col-span-4 flex flex-col items-center justify-center bg-gradient-to-b from-moss-50 to-amberWood-50/70 p-6 rounded-3xl border border-moss-200 text-center relative"></div>
-
-                    <div class="md:col-span-8 space-y-4">
-                        <div class="relative bg-white p-6 rounded-3xl border-2 border-moss-200 cozy-shadow dialogue-bubble-left">
-                            <div class="flex items-center justify-between border-b border-moss-100 pb-2 mb-3">
-                                <span id="story-step-indicator" class="text-xs font-bold text-amberWood-700 uppercase tracking-wider">Scene 1 of 3</span>
-                                <span class="text-xs text-moss-400"><i class="fa-solid fa-quote-right"></i></span>
-                            </div>
-                            <p id="story-text" class="text-moss-900 text-base leading-relaxed font-medium">Story dialogue loading...</p>
-                        </div>
-
-                        <div id="distortion-tag" class="bg-cozyRose/50 border border-cozyRose p-3.5 rounded-2xl flex items-center gap-3 text-xs text-moss-900 font-semibold">
-                            <i class="fa-solid fa-triangle-exclamation text-rose-600 text-lg"></i>
-                            <div>
-                                <span class="font-bold text-rose-900 block">Anxiety Thought Pattern:</span>
-                                <span id="distortion-name">Catastrophizing</span>
-                            </div>
-                        </div>
-
-                        <div id="story-choices" class="space-y-2 pt-1"></div>
-
-                        <div id="psychology-insight-box" class="hidden bg-moss-50 border-2 border-moss-200 p-4 rounded-2xl text-xs space-y-2">
-                            <div class="flex items-center gap-2 font-display font-bold text-sm text-moss-900">
-                                <i class="fa-solid fa-lightbulb text-amberWood-500 text-base"></i> Psychology Takeaway
-                            </div>
-                            <p id="psychology-insight-text" class="text-moss-700 leading-relaxed font-medium">Insight text...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= SECTION 3: CURIO CABINET ================= -->
-        <section id="tab-content-curio" class="tab-content hidden space-y-6">
-            <div class="bg-gradient-to-r from-cozySage/40 via-moss-50 to-amberWood-50 p-5 rounded-3xl border-2 border-moss-200 cozy-shadow flex flex-col md:flex-row items-center justify-between gap-4">
-                <div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-moss-200 text-moss-900 text-xs font-bold mb-1">
-                        <i class="fa-solid fa-hand text-moss-600"></i> Somatic Sensory Cabinet
-                    </div>
-                    <h2 class="font-display text-2xl font-bold text-moss-900">Barnaby's Somatic Curio Shelf</h2>
-                    <p class="text-sm text-moss-700">Tap items on the shelf to learn how sensory grounding halts panic loops.</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div onclick="openCurioModal('ice')" class="bg-cozyCream rounded-3xl p-5 border-2 border-moss-200 cozy-shadow hover:shadow-xl transition-all cursor-pointer">
-                    <div class="w-16 h-16 rounded-2xl bg-cyan-100 text-cyan-700 flex items-center justify-center text-3xl mb-3"><i class="fa-solid fa-gem"></i></div>
-                    <span class="text-[10px] uppercase font-bold text-cyan-800 bg-cyan-100 px-2.5 py-0.5 rounded-full">TIPP Cold Shock</span>
-                    <h3 class="font-display font-bold text-lg text-moss-900 mt-2">Smooth Ice Stone</h3>
-                    <p class="text-xs text-moss-600 mt-1">Cold shock for fast panic reduction.</p>
-                </div>
-
-                <div onclick="openCurioModal('blanket')" class="bg-cozyCream rounded-3xl p-5 border-2 border-moss-200 cozy-shadow hover:shadow-xl transition-all cursor-pointer">
-                    <div class="w-16 h-16 rounded-2xl bg-amberWood-100 text-amberWood-700 flex items-center justify-center text-3xl mb-3"><i class="fa-solid fa-mattress-pillow"></i></div>
-                    <span class="text-[10px] uppercase font-bold text-amberWood-900 bg-amberWood-100 px-2.5 py-0.5 rounded-full">Proprioceptive</span>
-                    <h3 class="font-display font-bold text-lg text-moss-900 mt-2">Weighted Quilt</h3>
-                    <p class="text-xs text-moss-600 mt-1">Deep pressure therapy for security.</p>
-                </div>
-
-                <div onclick="openCurioModal('lavender')" class="bg-cozyCream rounded-3xl p-5 border-2 border-moss-200 cozy-shadow hover:shadow-xl transition-all cursor-pointer">
-                    <div class="w-16 h-16 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-3xl mb-3"><i class="fa-solid fa-plant-wilt"></i></div>
-                    <span class="text-[10px] uppercase font-bold text-purple-900 bg-purple-100 px-2.5 py-0.5 rounded-full">Olfactory</span>
-                    <h3 class="font-display font-bold text-lg text-moss-900 mt-2">Dried Lavender</h3>
-                    <p class="text-xs text-moss-600 mt-1">Aroma grounding bypasses stress filters.</p>
-                </div>
-
-                <div onclick="openCurioModal('tea')" class="bg-cozyCream rounded-3xl p-5 border-2 border-moss-200 cozy-shadow hover:shadow-xl transition-all cursor-pointer">
-                    <div class="w-16 h-16 rounded-2xl bg-orange-100 text-orange-700 flex items-center justify-center text-3xl mb-3"><i class="fa-solid fa-mug-saucer"></i></div>
-                    <span class="text-[10px] uppercase font-bold text-orange-900 bg-orange-100 px-2.5 py-0.5 rounded-full">Gustatory</span>
-                    <h3 class="font-display font-bold text-lg text-moss-900 mt-2">Warm Honey Tea</h3>
-                    <p class="text-xs text-moss-600 mt-1">Thermal shift to ease muscle tension.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= SECTION 4: PATCHWORK JOURNAL ================= -->
-        <section id="tab-content-patchwork" class="tab-content hidden space-y-6">
-            <div class="bg-gradient-to-r from-cozyLavender/40 via-cozySage/30 to-amberWood-50 p-5 rounded-3xl border-2 border-moss-200 cozy-shadow">
-                <h2 class="font-display text-2xl font-bold text-moss-900">Hazel's Patchwork Quilt Journal</h2>
-                <p class="text-sm text-moss-700">No streaks or timers. Sew a soft patch to reflect how your mind feels today.</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Cash App Shop Modal ($CryptidCake09) -->
-    <div id="cashapp-modal" class="fixed inset-0 z-50 bg-moss-900/40 backdrop-blur-sm hidden items-center justify-center p-4">
-        <div class="bg-cozyCream border-2 border-moss-200 rounded-3xl max-w-md w-full p-6 cozy-shadow-lg relative text-center space-y-4">
-            <button onclick="closeCashAppModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-moss-100 text-moss-800 hover:bg-moss-200 flex items-center justify-center font-bold">✕</button>
-            
-            <div class="w-16 h-16 mx-auto rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-3xl border border-emerald-200">
-                <i class="fa-solid fa-shield-heart"></i>
-            </div>
-            
-            <h3 class="font-display font-bold text-xl text-moss-900">Support Moss & Mind</h3>
-            <p class="text-xs text-moss-700 leading-relaxed">
-                Support game development and get extra helper acorns instantly to unlock all 200 story levels faster! Send any support directly via Cash App:
-            </p>
-
-            <div class="p-3 bg-emerald-50 rounded-2xl border border-emerald-200 font-mono font-bold text-emerald-900 text-sm flex items-center justify-center gap-2">
-                <i class="fa-solid fa-dollar-sign text-emerald-600"></i>
-                <span>$CryptidCake09</span>
-            </div>
-
-            <div class="space-y-2 pt-2">
-                <a href="https://cash.app/$CryptidCake09" target="_blank" class="w-full py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-display font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    Open Cash App ($CryptidCake09)
-                </a>
+            <!-- ---------------- SCREEN 1: BRAMBLE BURROW (BREATHING PACER - image_2.png) ---------------- -->
+            <div id="screen-burrow" class="screen-view flex flex-col justify-between h-full space-y-4">
                 
-                <button onclick="claimBonusRewards()" class="w-full py-3.5 rounded-2xl bg-amberWood-100 hover:bg-amberWood-200 text-amberWood-900 font-display font-bold text-xs transition-all border border-amberWood-200">
-                    ✨ I've Sent Support! Claim +50 Acorns
+                <!-- Pattern Selector Bar -->
+                <div class="glass-pill p-1 rounded-full flex items-center justify-between gap-1 max-w-[320px] mx-auto">
+                    <button onclick="setBreathingMode('478')" id="btn-mode-478" class="glass-pill-active flex-1 py-1.5 rounded-full text-xs font-display text-center transition-all">4-7-8 Calm</button>
+                    <button onclick="setBreathingMode('444')" id="btn-mode-444" class="flex-1 py-1.5 rounded-full text-xs font-display text-center text-emerald-200/70 hover:text-white transition-all">Box</button>
+                    <button onclick="setBreathingMode('24')" id="btn-mode-24" class="flex-1 py-1.5 rounded-full text-xs font-display text-center text-emerald-200/70 hover:text-white transition-all">Quick</button>
+                </div>
+
+                <!-- Main Breathing Area -->
+                <div class="flex-1 flex flex-col items-center justify-center text-center my-2 relative">
+                    
+                    <h2 id="breathing-title" class="font-display text-2xl font-bold text-white tracking-wide">Breathe in with Bramble</h2>
+                    <p id="breathing-subtitle" class="text-xs text-emerald-200/70 font-semibold mt-1">You are safe right now</p>
+
+                    <!-- Breathing Hedgehog Stage -->
+                    <div class="relative w-64 h-64 my-6 flex items-center justify-center">
+                        
+                        <!-- Animated Dashed Guide Ring -->
+                        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 200 200">
+                            <circle class="dashed-ring" cx="100" cy="100" r="90" fill="none" stroke="#f2b868" stroke-width="2.5" opacity="0.8" />
+                        </svg>
+
+                        <!-- Glowing Firefly near Bramble -->
+                        <div class="absolute top-6 right-8 text-amberGold-300 animate-glow z-20">
+                            <i class="fa-solid fa-sparkles text-sm"></i>
+                        </div>
+
+                        <!-- Hedgehog Vector Graphic -->
+                        <div id="bramble-avatar" class="w-44 h-44 flex items-center justify-center transition-transform duration-300 ease-out">
+                            <svg viewBox="0 0 180 180" class="w-full h-full drop-shadow-2xl">
+                                <!-- Quills -->
+                                <path d="M 20,90 C 10,35 55,10 90,10 C 125,10 170,35 160,90 C 170,130 135,170 90,170 C 45,170 10,130 20,90 Z" fill="#67391f" />
+                                <path d="M 30,50 L 20,35 M 60,25 L 55,8 M 90,18 L 90,2 M 120,25 L 130,10 M 150,50 L 165,38 M 160,85 L 178,85 M 145,140 L 160,155 M 90,162 L 90,178 M 35,140 L 20,155" stroke="#44210d" stroke-width="4" stroke-linecap="round" />
+                                
+                                <!-- Soft Belly -->
+                                <ellipse cx="90" cy="105" rx="58" ry="48" fill="#fde4c1" />
+                                <ellipse cx="90" cy="110" rx="42" ry="34" fill="#fffcf7" opacity="0.7" />
+
+                                <!-- Sleeping Eyes -->
+                                <path d="M 62,82 Q 70,88 78,82" stroke="#2c1d11" stroke-width="3.5" stroke-linecap="round" fill="none" />
+                                <path d="M 102,82 Q 110,88 118,82" stroke="#2c1d11" stroke-width="3.5" stroke-linecap="round" fill="none" />
+                                
+                                <!-- Rosy Cheeks -->
+                                <ellipse cx="58" cy="92" rx="8" ry="5" fill="#f7d8d6" />
+                                <ellipse cx="122" cy="92" rx="8" ry="5" fill="#f7d8d6" />
+
+                                <!-- Nose & Mouth -->
+                                <ellipse cx="90" cy="88" rx="7" ry="5" fill="#44210d" />
+                                <path d="M 85,95 Q 90,100 95,95" stroke="#44210d" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+                                <!-- Little Paws tucked in -->
+                                <ellipse cx="60" cy="128" rx="10" ry="8" fill="#fde4c1" stroke="#b65622" stroke-width="2" />
+                                <ellipse cx="120" cy="128" rx="10" ry="8" fill="#fde4c1" stroke="#b65622" stroke-width="2" />
+                            </svg>
+                        </div>
+
+                        <!-- Big Countdown Number Overlay -->
+                        <div id="pacer-counter" class="absolute font-display font-bold text-5xl text-white drop-shadow-md z-30">
+                            4
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Action Buttons matching image_2.png -->
+                <div class="space-y-3 pt-2">
+                    <button id="pacer-main-btn" onclick="toggleBreathingPacer()" class="gold-btn w-full py-4 rounded-full text-base font-bold tracking-wide">
+                        Pause
+                    </button>
+
+                    <button onclick="triggerHeartbeatPulse()" class="dark-glass-btn w-full py-3.5 rounded-full text-sm font-semibold flex items-center justify-center gap-2">
+                        <span>Tap with your heartbeat</span>
+                    </button>
+                    <div id="heartbeat-toast" class="h-4 text-[11px] text-amberGold-300 font-bold text-center opacity-0 transition-opacity">
+                        ✨ Safe pulse acknowledged... Take a deep breath.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------------- SCREEN 2: STORY MAP (TEAHOUSE TALES - image_3.png) ---------------- -->
+            <div id="screen-tales" class="screen-view hidden flex flex-col justify-between h-full space-y-4">
+                
+                <!-- Region Selector Pills -->
+                <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+                    <button class="glass-pill px-4 py-2 rounded-full text-xs font-display font-semibold text-emerald-200/70 whitespace-nowrap">Bramble Hollow</button>
+                    <button class="glass-pill-active px-5 py-2 rounded-full text-xs font-display font-bold whitespace-nowrap">Whisperwood</button>
+                    <button class="glass-pill px-4 py-2 rounded-full text-xs font-display font-semibold text-emerald-200/70 whitespace-nowrap">Sunlit Meadow</button>
+                </div>
+
+                <!-- Winding Mossy Path with Stone Levels -->
+                <div class="relative flex-1 my-2 py-4 flex flex-col items-center justify-center">
+                    
+                    <!-- SVG Curved Path Line -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 300 320">
+                        <path d="M 80,260 Q 220,200 150,140 T 200,40" fill="none" stroke="#254734" stroke-width="8" stroke-linecap="round" stroke-dasharray="10 8" />
+                    </svg>
+
+                    <!-- Level 44 Stone -->
+                    <div class="absolute bottom-6 left-12 transform -rotate-6 flex flex-col items-center cursor-pointer" onclick="openStoryScreen(44)">
+                        <div class="glass-pill px-6 py-3 rounded-2xl border-2 border-emerald-600/60 shadow-lg text-center bg-forest-850">
+                            <span class="font-display text-xs font-bold text-emerald-100">Level 44</span>
+                            <div class="flex items-center justify-center gap-1 text-amberGold-400 text-xs mt-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 45 Active Glowing Stone + Bramble Walking -->
+                    <div class="absolute top-28 center transform translate-x-4 flex flex-col items-center cursor-pointer z-10" onclick="openStoryScreen(45)">
+                        
+                        <!-- Bramble Companion next to level -->
+                        <div class="absolute -right-14 -top-8 w-12 h-12 animate-float">
+                            <svg viewBox="0 0 100 100" class="w-full h-full">
+                                <circle cx="50" cy="50" r="35" fill="#fde4c1" />
+                                <circle cx="38" cy="45" r="4" fill="#2c1d11" />
+                                <circle cx="62" cy="45" r="4" fill="#2c1d11" />
+                                <ellipse cx="50" cy="55" rx="5" ry="3" fill="#67391f" />
+                                <rect x="65" y="40" width="14" height="20" rx="4" fill="#d48a37" />
+                            </svg>
+                        </div>
+
+                        <div class="gold-btn px-7 py-3.5 rounded-2xl shadow-2xl text-center border-2 border-white/40 transform scale-105">
+                            <span class="font-display text-sm font-extrabold text-cozyTextDark">Level 45</span>
+                            <div class="flex items-center justify-center gap-1 text-cozyTextDark text-xs mt-0.5">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 46 Stone -->
+                    <div class="absolute top-8 left-16 transform rotate-3 flex flex-col items-center opacity-80 cursor-pointer" onclick="openStoryScreen(46)">
+                        <div class="glass-pill px-6 py-3 rounded-2xl text-center bg-forest-850">
+                            <span class="font-display text-xs font-bold text-emerald-200/70">Level 46</span>
+                            <div class="flex items-center justify-center gap-1 text-emerald-400/40 text-xs mt-0.5">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Level Info Card matching image_3.png -->
+                <div onclick="openStoryScreen(45)" class="glass-pill p-4 rounded-3xl flex items-center justify-between cursor-pointer hover:bg-forest-700/60 transition-all border border-amberGold-400/30">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-700 to-teal-900 flex items-center justify-center text-xl text-amberGold-300 shadow-inner">
+                            🌊
+                        </div>
+                        <div>
+                            <h3 class="font-display font-bold text-sm text-white">Level 45: The Unanswered Wave</h3>
+                            <div class="flex items-center gap-1.5 text-xs text-emerald-200/70 font-semibold mt-0.5">
+                                <i class="fa-solid fa-cloud-bolt text-amberGold-400 text-[10px]"></i>
+                                <span>Mind-reading</span>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-right text-emerald-300/60"></i>
+                </div>
+            </div>
+
+            <!-- ---------------- SCREEN 3: PIP THE FINCH STORY READER (image_1.png) ---------------- -->
+            <div id="screen-story-reader" class="screen-view hidden flex flex-col justify-between h-full space-y-4">
+                
+                <!-- Story Canvas Stage -->
+                <div class="relative flex-1 flex flex-col items-center justify-center text-center my-2">
+                    
+                    <!-- Rain Canopy Atmosphere & Finch SVG -->
+                    <div class="relative w-56 h-48 flex items-center justify-center my-2">
+                        <svg viewBox="0 0 200 160" class="w-full h-full drop-shadow-xl">
+                            <!-- Tree Branch & Nest -->
+                            <path d="M 10,120 Q 80,110 190,130" stroke="#44210d" stroke-width="12" stroke-linecap="round" fill="none" />
+                            <ellipse cx="140" cy="115" rx="30" ry="16" fill="#804a26" />
+                            <ellipse cx="140" cy="112" rx="24" ry="10" fill="#2c1d11" />
+
+                            <!-- Pip the Finch -->
+                            <g class="animate-float">
+                                <ellipse cx="75" cy="90" rx="32" ry="26" fill="#f7b274" />
+                                <ellipse cx="75" cy="98" rx="24" ry="16" fill="#fde4c1" />
+                                <circle cx="92" cy="75" r="18" fill="#f7b274" />
+                                <path d="M 108,73 L 122,76 L 108,82 Z" fill="#f19247" />
+                                <circle cx="98" cy="72" r="3" fill="#2c1d11" />
+                                <ellipse cx="90" cy="81" rx="4" ry="3" fill="#f7d8d6" />
+                            </g>
+                        </svg>
+                    </div>
+
+                    <!-- Speech Bubble matching image_1.png -->
+                    <div class="bg-cozyCream text-cozyTextDark p-5 rounded-3xl shadow-xl max-w-[320px] relative mt-2 border-2 border-cozyCreamDark">
+                        <!-- Speech bubble arrow -->
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-b-8 border-b-cozyCream"></div>
+                        <p id="story-dialogue-text" class="font-display font-bold text-base leading-snug">
+                            "Oh no! What if the wind blows my nest away?"
+                        </p>
+                    </div>
+
+                    <!-- CBT Distortion Pill Tag -->
+                    <div class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full glass-pill text-xs font-semibold text-emerald-100">
+                        <i class="fa-solid fa-cloud-bolt text-amberGold-400"></i>
+                        <span id="story-distortion-tag">Catastrophizing</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Choices matching image_1.png -->
+                <div class="space-y-3 pt-2">
+                    <button onclick="handleStoryChoice(1)" class="gold-btn w-full py-4 px-5 rounded-full text-sm font-bold text-center leading-tight">
+                        Your nest has survived storms before. Let's check it together.
+                    </button>
+
+                    <button onclick="handleStoryChoice(2)" class="dark-glass-btn w-full py-3.5 px-5 rounded-full text-xs font-semibold text-center text-emerald-100/90 leading-tight">
+                        Abandon your nest right now!
+                    </button>
+                </div>
+            </div>
+
+            <!-- ---------------- SCREEN 4: PATCHWORK JOURNAL (image_4.png) ---------------- -->
+            <div id="screen-journal" class="screen-view hidden flex flex-col justify-between h-full space-y-4">
+                
+                <div class="text-center">
+                    <h2 class="font-display text-2xl font-bold text-white">Patchwork Journal</h2>
+                    <p class="text-xs text-emerald-200/70 font-semibold mt-0.5">Stitch today's tiny comforts with Hazel.</p>
+                </div>
+
+                <!-- Hazel Bunny Sleeping on 2x2 Stitched Quilt -->
+                <div class="relative my-2 flex flex-col items-center">
+                    
+                    <!-- Hazel Sleeping SVG -->
+                    <div class="w-24 h-16 relative -mb-4 z-20">
+                        <svg viewBox="0 0 100 60" class="w-full h-full">
+                            <ellipse cx="50" cy="40" rx="26" ry="18" fill="#f5eedc" />
+                            <ellipse cx="32" cy="22" rx="6" ry="18" fill="#f5eedc" transform="rotate(-20 32 22)" />
+                            <ellipse cx="44" cy="22" rx="6" ry="18" fill="#f5eedc" transform="rotate(10 44 22)" />
+                            <path d="M 56,38 Q 62,42 68,38" stroke="#2c1d11" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+
+                    <!-- 2x2 Stitched Quilt Container matching image_4.png -->
+                    <div id="quilt-container" class="grid grid-cols-2 gap-2.5 p-3.5 rounded-3xl glass-pill w-full max-w-[310px] bg-forest-900/90 border border-emerald-500/20">
+                        
+                        <!-- Patch 1: Warmth -->
+                        <div class="aspect-square rounded-2xl bg-amberGold-300 text-cozyTextDark p-3 flex flex-col items-center justify-center text-center shadow-md border-2 border-dashed border-cozyCreamDark">
+                            <span class="text-2xl mb-1">☕</span>
+                            <span class="font-display font-bold text-xs">Warmth</span>
+                        </div>
+
+                        <!-- Patch 2: Gentle -->
+                        <div class="aspect-square rounded-2xl bg-emerald-300 text-cozyTextDark p-3 flex flex-col items-center justify-center text-center shadow-md border-2 border-dashed border-cozyCreamDark">
+                            <span class="text-2xl mb-1">🌿</span>
+                            <span class="font-display font-bold text-xs">Gentle</span>
+                        </div>
+
+                        <!-- Patch 3: Rest -->
+                        <div class="aspect-square rounded-2xl bg-sky-300 text-cozyTextDark p-3 flex flex-col items-center justify-center text-center shadow-md border-2 border-dashed border-cozyCreamDark">
+                            <span class="text-2xl mb-1">🌙</span>
+                            <span class="font-display font-bold text-xs">Rest</span>
+                        </div>
+
+                        <!-- Patch 4: Safe -->
+                        <div class="aspect-square rounded-2xl bg-rose-300 text-cozyTextDark p-3 flex flex-col items-center justify-center text-center shadow-md border-2 border-dashed border-cozyCreamDark">
+                            <span class="text-2xl mb-1">🏡</span>
+                            <span class="font-display font-bold text-xs">Safe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swatches & Journal Input -->
+                <div class="space-y-3">
+                    <!-- Fabric Color Swatches -->
+                    <div class="flex items-center justify-center gap-3">
+                        <button onclick="selectFabric('#f7cd88')" class="w-8 h-8 rounded-full bg-amberGold-300 border-2 border-white ring-2 ring-amberGold-400 focus:outline-none"></button>
+                        <button onclick="selectFabric('#a7f3d0')" class="w-8 h-8 rounded-full bg-emerald-300 border-2 border-transparent hover:border-white transition-all"></button>
+                        <button onclick="selectFabric('#bae6fd')" class="w-8 h-8 rounded-full bg-sky-300 border-2 border-transparent hover:border-white transition-all"></button>
+                        <button onclick="selectFabric('#fecdd3')" class="w-8 h-8 rounded-full bg-rose-300 border-2 border-transparent hover:border-white transition-all"></button>
+                        <button onclick="selectFabric('#e9d5ff')" class="w-8 h-8 rounded-full bg-purple-300 border-2 border-transparent hover:border-white transition-all"></button>
+                    </div>
+
+                    <!-- Text Input box matching image_4.png -->
+                    <input id="journal-input" type="text" placeholder="What tiny comfort found you today?" class="w-full py-3.5 px-5 rounded-2xl dark-glass-btn text-xs text-cozyCream placeholder:text-emerald-200/40 focus:outline-none focus:ring-2 focus:ring-amberGold-400 font-medium">
+
+                    <!-- Primary Action Pill -->
+                    <button onclick="sewNewPatch()" class="gold-btn w-full py-4 rounded-full text-sm font-bold tracking-wide">
+                        Sew patch into quilt
+                    </button>
+                </div>
+            </div>
+
+            <!-- ---------------- SCREEN 5: CURIOS SOMATIC TOOLKIT ---------------- -->
+            <div id="screen-curios" class="screen-view hidden flex flex-col justify-between h-full space-y-4">
+                <div class="text-center">
+                    <h2 class="font-display text-2xl font-bold text-white">Barnaby's Curios</h2>
+                    <p class="text-xs text-emerald-200/70 font-semibold mt-0.5">Somatic tools for immediate panic grounding.</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 my-2">
+                    <div class="glass-pill p-4 rounded-3xl flex flex-col items-center text-center border border-emerald-500/30">
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-900/60 text-cyan-300 flex items-center justify-center text-xl mb-2">🧊</div>
+                        <h3 class="font-display font-bold text-xs text-white">Ice Stone</h3>
+                        <p class="text-[10px] text-emerald-200/60 mt-1">Triggers dive reflex to drop pulse fast.</p>
+                    </div>
+
+                    <div class="glass-pill p-4 rounded-3xl flex flex-col items-center text-center border border-emerald-500/30">
+                        <div class="w-12 h-12 rounded-2xl bg-amberGold-900/60 text-amberGold-300 flex items-center justify-center text-xl mb-2">🛏️</div>
+                        <h3 class="font-display font-bold text-xs text-white">Weighted Quilt</h3>
+                        <p class="text-[10px] text-emerald-200/60 mt-1">Deep pressure releases calm serotonin.</p>
+                    </div>
+
+                    <div class="glass-pill p-4 rounded-3xl flex flex-col items-center text-center border border-emerald-500/30">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-900/60 text-purple-300 flex items-center justify-center text-xl mb-2">🪻</div>
+                        <h3 class="font-display font-bold text-xs text-white">Lavender</h3>
+                        <p class="text-[10px] text-emerald-200/60 mt-1">Olfactory signals calm limbic fear.</p>
+                    </div>
+
+                    <div class="glass-pill p-4 rounded-3xl flex flex-col items-center text-center border border-emerald-500/30">
+                        <div class="w-12 h-12 rounded-2xl bg-orange-900/60 text-orange-300 flex items-center justify-center text-xl mb-2">🍵</div>
+                        <h3 class="font-display font-bold text-xs text-white">Honey Tea</h3>
+                        <p class="text-[10px] text-emerald-200/60 mt-1">Thermal shift eases muscular tension.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-3xl glass-pill text-xs text-emerald-200/80 leading-relaxed text-center">
+                    ✨ Touch physical objects around you right now to return safely to the present moment.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= FLOATING GLASS BOTTOM NAVIGATION BAR (Matching Screenshots) ================= -->
+        <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 z-30 w-[90%] max-w-[360px]">
+            <div class="glass-pill p-1.5 rounded-full flex items-center justify-between shadow-2xl border border-white/15">
+                
+                <!-- Tab 1: Burrow -->
+                <button onclick="switchTab('burrow')" id="nav-btn-burrow" class="nav-btn flex-1 py-2 rounded-full flex flex-col items-center text-amberGold-400 transition-all">
+                    <i class="fa-solid fa-house text-sm"></i>
+                    <span class="text-[10px] font-display font-bold mt-0.5">Burrow</span>
+                </button>
+
+                <!-- Tab 2: Tales -->
+                <button onclick="switchTab('tales')" id="nav-btn-tales" class="nav-btn flex-1 py-2 rounded-full flex flex-col items-center text-emerald-200/60 hover:text-white transition-all">
+                    <i class="fa-solid fa-book-open text-sm"></i>
+                    <span class="text-[10px] font-display font-bold mt-0.5">Tales</span>
+                </button>
+
+                <!-- Tab 3: Curios -->
+                <button onclick="switchTab('curios')" id="nav-btn-curios" class="nav-btn flex-1 py-2 rounded-full flex flex-col items-center text-emerald-200/60 hover:text-white transition-all">
+                    <i class="fa-solid fa-sparkles text-sm"></i>
+                    <span class="text-[10px] font-display font-bold mt-0.5">Curios</span>
+                </button>
+
+                <!-- Tab 4: Journal -->
+                <button onclick="switchTab('journal')" id="nav-btn-journal" class="nav-btn flex-1 py-2 rounded-full flex flex-col items-center text-emerald-200/60 hover:text-white transition-all">
+                    <i class="fa-solid fa-book-bookmark text-sm"></i>
+                    <span class="text-[10px] font-display font-bold mt-0.5">Journal</span>
                 </button>
             </div>
         </div>
+
     </div>
 
-    <!-- Curio Modal -->
-    <div id="curio-modal" class="fixed inset-0 z-50 bg-moss-900/40 backdrop-blur-sm hidden items-center justify-center p-4">
-        <div class="bg-cozyCream border-2 border-moss-200 rounded-3xl max-w-lg w-full p-6 cozy-shadow-lg relative">
-            <button onclick="closeCurioModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-moss-100 text-moss-800 flex items-center justify-center font-bold">✕</button>
-            <div id="curio-modal-content" class="space-y-4"></div>
-        </div>
-    </div>
-
-    <footer class="bg-cozyBg border-t border-moss-200 py-6 px-4 text-center text-xs text-moss-700 relative z-10">
-        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div class="flex items-center gap-2 font-display font-semibold text-moss-900">
-                <i class="fa-solid fa-leaf text-moss-500"></i> Moss & Mind Cozy Companion
-            </div>
-            <span>Anxiety is an involuntary physical false alarm. You are grounded, safe, and loved.</span>
-        </div>
-    </footer>
-
-    <!-- Interactive JS -->
+    <!-- Application Script -->
     <script>
+        /* Global App State */
         let state = {
-            activeTab: 'bramble',
-            soundPlaying: false,
+            activeTab: 'burrow',
             breathingPattern: '478',
-            breathingActive: false,
-            breathingInterval: null,
+            breathingActive: true,
+            breathingTimer: null,
             breathingPhase: 'inhale',
-            breathingTimeLeft: 4,
-            currentLevel: 1,
-            unlockedLevel: 1,
-            selectedRegion: 0,
-            acorns: 0,
-            teaLeaves: 0,
-            blossoms: 0
+            breathingSeconds: 4,
+            selectedFabricColor: '#f7cd88',
+            acorns: 48,
+            leaves: 24,
+            blossoms: 9
         };
 
-        function loadSavedProgress() {
-            try {
-                const saved = localStorage.getItem('moss_mind_progress');
-                if (saved) {
-                    const parsed = JSON.parse(saved);
-                    state.unlockedLevel = parsed.unlockedLevel || 1;
-                    state.acorns = parsed.acorns || 0;
-                    state.teaLeaves = parsed.teaLeaves || 0;
-                }
-            } catch(e) {}
-            updateRewardBadges();
-        }
+        const breathingConfigs = {
+            '478': { inhale: 4, hold: 7, exhale: 8 },
+            '444': { inhale: 4, hold: 4, exhale: 4 },
+            '24':  { inhale: 2, hold: 0, exhale: 4 }
+        };
 
-        function saveProgress() {
-            try {
-                localStorage.setItem('moss_mind_progress', JSON.stringify({
-                    unlockedLevel: state.unlockedLevel,
-                    acorns: state.acorns,
-                    teaLeaves: state.teaLeaves
-                }));
-            } catch(e) {}
-            updateRewardBadges();
-        }
-
-        function updateRewardBadges() {
-            document.getElementById('acorn-count').innerText = state.acorns;
-            document.getElementById('tea-count').innerText = state.teaLeaves;
-        }
-
-        /* Cash App Modal Functions */
-        function openCashAppModal() {
-            document.getElementById('cashapp-modal').classList.remove('hidden');
-            document.getElementById('cashapp-modal').classList.add('flex');
-        }
-
-        function closeCashAppModal() {
-            document.getElementById('cashapp-modal').classList.add('hidden');
-        }
-
-        function claimBonusRewards() {
-            state.acorns += 50;
-            state.teaLeaves += 10;
-            saveProgress();
-            alert("Thank you so much for your support! 50 Golden Acorns & 10 Tea Leaves have been added to your pouch.");
-            closeCashAppModal();
-            renderStoryMap();
-        }
-
-        const regions = [
-            { id: 0, name: "Bramble Hollow", range: [1, 40], desc: "Overcoming catastrophic thinking and panic alarms." },
-            { id: 1, name: "Whisperwood Forest", range: [41, 80], desc: "Easing social anxiety and overthinking." },
-            { id: 2, name: "Sunlit Meadow", range: [81, 120], desc: "Calming perfectionism and high expectations." },
-            { id: 3, name: "Mistpeak Ridge", range: [121, 160], desc: "Managing physical panic symptoms." },
-            { id: 4, name: "Cozy Haven", range: [161, 200], desc: "Building lifelong self-compassion." }
-        ];
-
-        const animals = [
-            { name: "Pip the Finch", SVG: <svg viewBox="0 0 160 160" class="w-28 h-28 animate-float"><ellipse cx="80" cy="85" rx="42" ry="36" fill="#f7b274"/><ellipse cx="80" cy="95" rx="32" ry="24" fill="#fde4c1"/><circle cx="102" cy="65" r="24" fill="#f7b274"/><path d="M 122,63 L 138,67 L 122,73 Z" fill="#f19247"/><circle cx="110" cy="60" r="4" fill="#2b422a"/></svg> },
-            { name: "Barnaby the Bear", SVG: <svg viewBox="0 0 160 160" class="w-28 h-28 animate-float"><circle cx="40" cy="40" r="16" fill="#934421"/><circle cx="120" cy="40" r="16" fill="#934421"/><circle cx="80" cy="80" r="50" fill="#934421"/><ellipse cx="80" cy="95" rx="24" ry="16" fill="#fde4c1"/><ellipse cx="80" cy="88" rx="10" ry="7" fill="#44210d"/><circle cx="62" cy="72" r="4" fill="#fffcf7"/><circle cx="98" cy="72" r="4" fill="#fffcf7"/></svg> }
-        ];
-
-        function renderStoryMap() {
-            const regionBar = document.getElementById('region-tab-bar');
-            regionBar.innerHTML = '';
-
-            regions.forEach((r, idx) => {
-                const btn = document.createElement('button');
-                btn.className = px-4 py-2 rounded-2xl text-xs font-bold transition-all whitespace-nowrap border ${state.selectedRegion === idx ? 'bg-moss-600 text-white border-moss-600 shadow-sm' : 'bg-cozyCream text-moss-800 border-moss-200 hover:bg-moss-100'};
-                btn.innerText = ${r.name} (${r.range[0]}-${r.range[1]});
-                btn.onclick = () => { state.selectedRegion = idx; renderStoryMap(); };
-                regionBar.appendChild(btn);
-            });
-
-            const curRegion = regions[state.selectedRegion];
-            document.getElementById('region-title').innerText = Region ${curRegion.id + 1}: ${curRegion.name};
-            document.getElementById('region-desc').innerText = curRegion.desc;
-
-            let unlockedInRegion = 0;
-            const grid = document.getElementById('level-grid');
-            grid.innerHTML = '';
-
-            for (let lvl = curRegion.range[0]; lvl <= curRegion.range[1]; lvl++) {
-                const isUnlocked = lvl <= state.unlockedLevel;
-                if (isUnlocked) unlockedInRegion++;
-
-                const cell = document.createElement('button');
-                cell.className = p-3.5 rounded-2xl border-2 flex flex-col items-center justify-center transition-all ${isUnlocked ? 'bg-cozyCream border-moss-300 hover:border-moss-500 hover:shadow-md text-moss-900 cursor-pointer' : 'bg-moss-100/50 border-moss-200 text-moss-400 cursor-not-allowed opacity-60'};
-                
-                if (isUnlocked) {
-                    cell.onclick = () => startStoryLevel(lvl);
-                    cell.innerHTML = `
-                        <span class="text-xs font-bold font-display text-amberWood-900">Level ${lvl}</span>
-                        <span class="text-lg my-1">${lvl < state.unlockedLevel ? '⭐' : '📖'}</span>
-                        <span class="text-[10px] font-bold text-moss-600">${lvl < state.unlockedLevel ? 'Completed' : 'Play'}</span>
-                    `;
-                } else {
-                    cell.innerHTML = `
-                        <span class="text-xs font-bold font-display text-moss-400">Level ${lvl}</span>
-                        <span class="text-base my-1"><i class="fa-solid fa-lock"></i></span>
-                        <span class="text-[10px] font-bold text-moss-400">Locked</span>
-                    `;
-                }
-                grid.appendChild(cell);
-            }
-
-            document.getElementById('region-progress-badge').innerText = ${unlockedInRegion} / 40 Unlocked;
-        }
-
-        function startStoryLevel(lvl) {
-            state.currentLevel = lvl;
-            document.getElementById('story-map-view').classList.add('hidden');
-            document.getElementById('story-play-view').classList.remove('hidden');
-            document.getElementById('story-level-tag').innerText = Level ${lvl} • ${regions.find(r => lvl >= r.range[0] && lvl <= r.range[1]).name};
-            renderLevelStep();
-        }
-
-        function exitToStoryMap() {
-            document.getElementById('story-play-view').classList.add('hidden');
-            document.getElementById('story-map-view').classList.remove('hidden');
-            renderStoryMap();
-        }
-
-        function renderLevelStep() {
-            const animal = animals[(state.currentLevel - 1) % animals.length];
-            const stage = document.getElementById('story-character-stage');
-            stage.innerHTML = ${animal.SVG}<h3 class="font-display font-bold text-lg text-moss-900 mt-2">${animal.name}</h3>;
-
-            document.getElementById('story-step-indicator').innerText = Level ${state.currentLevel} • Scene 1 of 3;
-            document.getElementById('story-text').innerText = "${animal.name} is facing Level ${state.currentLevel}! 'What if things don't turn out as expected?'";
-
-            const container = document.getElementById('story-choices');
-            container.innerHTML = '';
-
-            const choiceBtn = document.createElement('button');
-            choiceBtn.className = "w-full text-left p-3.5 rounded-2xl border border-amberWood-200 bg-amberWood-50/70 hover:bg-amberWood-100 text-xs font-semibold text-amberWood-950 transition-all flex items-center justify-between";
-            choiceBtn.innerHTML = Take a deep breath and look at the facts. <i class="fa-solid fa-chevron-right text-amberWood-500"></i>;
-            choiceBtn.onclick = () => completeLevelStep();
-            container.appendChild(choiceBtn);
-        }
-
-        function completeLevelStep() {
-            state.acorns += 2;
-            state.teaLeaves += 1;
-            if (state.currentLevel === state.unlockedLevel && state.unlockedLevel < 200) {
-                state.unlockedLevel++;
-            }
-            saveProgress();
-
-            const container = document.getElementById('story-choices');
-            container.innerHTML = '';
-
-            const completeBtn = document.createElement('button');
-            completeBtn.className = "w-full p-3.5 rounded-2xl bg-amberWood-500 hover:bg-amberWood-600 text-white font-display font-bold text-xs shadow-md transition-all";
-            completeBtn.innerHTML = ✨ Story Completed! (+2 🌰 +1 🍃 Rewards);
-            completeBtn.onclick = () => exitToStoryMap();
-            container.appendChild(completeBtn);
-        }
-
+        /* Screen Navigation Logic */
         function switchTab(tabId) {
             state.activeTab = tabId;
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-            document.getElementById(tab-content-${tabId}).classList.remove('hidden');
 
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.className = "tab-btn px-4 py-2 rounded-2xl font-display text-sm font-medium transition-all flex items-center gap-2 border border-transparent text-moss-800 hover:bg-moss-100/70 whitespace-nowrap";
+            // Hide all screens
+            document.querySelectorAll('.screen-view').forEach(s => s.classList.add('hidden'));
+            
+            // Hide/Show headers
+            if (tabId === 'story-reader') {
+                document.getElementById('currency-header').classList.add('hidden');
+                document.getElementById('story-header').classList.remove('hidden');
+                document.getElementById('screen-story-reader').classList.remove('hidden');
+            } else {
+                document.getElementById('currency-header').classList.remove('hidden');
+                document.getElementById('story-header').classList.add('hidden');
+                document.getElementById(screen-${tabId}).classList.remove('hidden');
+            }
+
+            // Update bottom nav highlights
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.className = "nav-btn flex-1 py-2 rounded-full flex flex-col items-center text-emerald-200/60 hover:text-white transition-all";
             });
 
-            const activeBtn = document.getElementById(tab-btn-${tabId});
-            activeBtn.className = "tab-btn active px-4 py-2 rounded-2xl font-display text-sm font-medium transition-all flex items-center gap-2 border border-transparent bg-moss-600 text-white shadow-sm whitespace-nowrap";
+            const activeNav = document.getElementById(nav-btn-${tabId === 'story-reader' ? 'tales' : tabId});
+            if (activeNav) {
+                activeNav.className = "nav-btn flex-1 py-2 rounded-full flex flex-col items-center text-amberGold-400 glass-pill transition-all";
+            }
+        }
+
+        /* Breathing Pacer Engine */
+        function setBreathingMode(modeKey) {
+            state.breathingPattern = modeKey;
+            ['478', '444', '24'].forEach(m => {
+                const btn = document.getElementById(btn-mode-${m});
+                if (m === modeKey) {
+                    btn.className = "glass-pill-active flex-1 py-1.5 rounded-full text-xs font-display text-center transition-all";
+                } else {
+                    btn.className = "flex-1 py-1.5 rounded-full text-xs font-display text-center text-emerald-200/70 hover:text-white transition-all";
+                }
+            });
+            resetBreathingPacer();
+        }
+
+        function toggleBreathingPacer() {
+            const btn = document.getElementById('pacer-main-btn');
+            if (state.breathingActive) {
+                clearInterval(state.breathingTimer);
+                state.breathingActive = false;
+                btn.innerText = "Start Breathing";
+            } else {
+                state.breathingActive = true;
+                btn.innerText = "Pause";
+                startBreathingCycle();
+            }
+        }
+
+        function resetBreathingPacer() {
+            clearInterval(state.breathingTimer);
+            state.breathingPhase = 'inhale';
+            state.breathingSeconds = breathingConfigs[state.breathingPattern].inhale;
+            if (state.breathingActive) startBreathingCycle();
+        }
+
+        function startBreathingCycle() {
+            clearInterval(state.breathingTimer);
+            state.breathingTimer = setInterval(() => {
+                const config = breathingConfigs[state.breathingPattern];
+                
+                if (state.breathingSeconds > 1) {
+                    state.breathingSeconds--;
+                } else {
+                    if (state.breathingPhase === 'inhale') {
+                        state.breathingPhase = config.hold > 0 ? 'hold' : 'exhale';
+                        state.breathingSeconds = config.hold > 0 ? config.hold : config.exhale;
+                    } else if (state.breathingPhase === 'hold') {
+                        state.breathingPhase = 'exhale';
+                        state.breathingSeconds = config.exhale;
+                    } else {
+                        state.breathingPhase = 'inhale';
+                        state.breathingSeconds = config.inhale;
+                    }
+                }
+
+                // Update UI Title & Avatar Scale
+                const title = document.getElementById('breathing-title');
+                const avatar = document.getElementById('bramble-avatar');
+                const counter = document.getElementById('pacer-counter');
+
+                counter.innerText = state.breathingSeconds;
+
+                if (state.breathingPhase === 'inhale') {
+                    title.innerText = "Breathe in with Bramble";
+                    avatar.style.transform = "scale(1.2)";
+                } else if (state.breathingPhase === 'hold') {
+                    title.innerText = "Gently hold...";
+                    avatar.style.transform = "scale(1.2)";
+                } else {
+                    title.innerText = "Exhale softly...";
+                    avatar.style.transform = "scale(0.9)";
+                }
+            }, 1000);
+        }
+
+        function triggerHeartbeatPulse() {
+            const toast = document.getElementById('heartbeat-toast');
+            toast.style.opacity = '1';
+            setTimeout(() => toast.style.opacity = '0', 2500);
+        }
+
+        /* Story Reader Navigation */
+        function openStoryScreen(lvl) {
+            switchTab('story-reader');
+        }
+
+        function handleStoryChoice(choiceNum) {
+            const dialogue = document.getElementById('story-dialogue-text');
+            if (choiceNum === 1) {
+                dialogue.innerText = "Pip takes a deep breath... 'You're right! We built this nest together with sturdy twigs.' (+2 🌰)";
+                state.acorns += 2;
+                document.getElementById('acorn-val').innerText = state.acorns;
+            } else {
+                dialogue.innerText = "Fleeing keeps anxiety high! Remind Pip to check facts before abandoning safety.";
+            }
+        }
+
+        /* Quilt Fabric Selector */
+        function selectFabric(hexColor) {
+            state.selectedFabricColor = hexColor;
+        }
+
+        function sewNewPatch() {
+            const input = document.getElementById('journal-input');
+            const val = input.value.trim() || "Comfort";
+            const container = document.getElementById('quilt-container');
+
+            const patch = document.createElement('div');
+            patch.className = "aspect-square rounded-2xl text-cozyTextDark p-3 flex flex-col items-center justify-center text-center shadow-md border-2 border-dashed border-cozyCreamDark animate-float";
+            patch.style.backgroundColor = state.selectedFabricColor;
+            patch.innerHTML = `
+                <span class="text-2xl mb-1">✨</span>
+                <span class="font-display font-bold text-xs truncate max-w-full px-1">${val}</span>
+            `;
+
+            container.appendChild(patch);
+            input.value = '';
+        }
+
+        /* Ambient Canvas Firefly System */
+        function initFireflyCanvas() {
+            const canvas = document.getElementById('fireflyCanvas');
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width = canvas.parentElement.clientWidth;
+            let height = canvas.height = canvas.parentElement.clientHeight;
+
+            const fireflies = Array.from({ length: 15 }, () => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                r: Math.random() * 2.5 + 1,
+                alpha: Math.random() * 0.6 + 0.2,
+                speedY: Math.random() * 0.3 + 0.1,
+                speedX: Math.sin(Math.random() * Math.PI) * 0.2
+            }));
+
+            function render() {
+                ctx.clearRect(0, 0, width, height);
+                fireflies.forEach(f => {
+                    f.y -= f.speedY;
+                    f.x += Math.sin(f.y * 0.02) * 0.2;
+                    if (f.y < -10) { f.y = height + 10; f.x = Math.random() * width; }
+                    
+                    ctx.beginPath();
+                    ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+                    ctx.fillStyle = rgba(242, 184, 104, ${f.alpha});
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = "#f2b868";
+                    ctx.fill();
+                });
+                requestAnimationFrame(render);
+            }
+            render();
         }
 
         window.onload = function() {
-            loadSavedProgress();
-            renderStoryMap();
+            initFireflyCanvas();
+            startBreathingCycle();
         };
     </script>
 </body>
